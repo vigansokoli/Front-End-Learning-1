@@ -16,3 +16,10 @@
         clear: both;
     }
 }
+
+@mixin font-transform($size, $weight, $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;    
+    text-transform: uppercase;
+}
