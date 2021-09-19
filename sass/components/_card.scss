@@ -8,7 +8,7 @@
     height: $card-height;
 
     $gradient-1 : linear-gradient(to right bottom, ($color-primary-light), ($color-primary-dark));
-    $gradient-2 : linear-gradient(to right bottom, ($color-secondary-light), ($color-secondary-dark));
+    $gradient-2 : linear-gradient(to right bottom, ($color-marine-light), ($color-marine-dark));
     $gradient-3 : linear-gradient(to right bottom, ($color-terciary-light), ($color-terciary-dark));
 
     &__side{
@@ -30,15 +30,15 @@
 
         &--back{    
             transform: rotateY(-180deg);
-            &-1{
-                background-image: $gradient-1;
-            }  
-
-            &-2{
+            &--1{
                 background-image: $gradient-2;
             }  
 
-            &-3{
+            &--2{
+                background-image: $gradient-1;
+            }  
+
+            &--3{
                 background-image: $gradient-3;
             }              
         }        
@@ -64,16 +64,16 @@
         
 
         &--1{
-            background-image: $gradient-1, url("../img/nat-5.jpg");
+            background-image: $gradient-2, url("../img/nat-5.jpg");
             // , $gradient-1
         }
 
         &--2{
-            background-image: url("../img/nat-6.img"), $gradient-1;
+            background-image: $gradient-1,url("../img/nat-6.jpg");
         }
 
         &--3{
-            background-image: url("../img/nat-7.img"), $gradient-1;
+            background-image: url("../img/nat-7.jpg"), $gradient-3;
         }
     }
 
@@ -81,7 +81,7 @@
         @include font-transform(2.8rem, 300, $color-white);        
         top:12rem;
         right: 2rem;
-        width: 60%;
+        width: 70%;
         position:absolute;
         text-align: right;            
     }
@@ -92,7 +92,7 @@
         box-decoration-break:clone;
 
         &--1{
-            background-image: $gradient-1;
+            background-image: $gradient-2;
         }
 
         &--2{
@@ -122,4 +122,31 @@
             }
         }
     }
+
+    .card_cta{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width:90%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__price-box{
+        text-transform: uppercase;
+        margin-bottom: 6rem;
+
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+    }
+
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+    }    
+
+
 }
