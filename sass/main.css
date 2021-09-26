@@ -187,35 +187,35 @@ body {
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-top-huge {
-  margin-top: 10rem;
+  margin-top: 10rem !important;
 }
 
 .u-margin-top-big {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .u-margin-top-medium {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 
 .u-margin-top-small {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .btn:hover {
@@ -252,7 +252,7 @@ body {
   transition: all .4s;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -261,6 +261,9 @@ body {
   -webkit-transition: all .2s;
   transition: all .2s;
   position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-white {
@@ -308,7 +311,7 @@ body {
           transform: translateY(-2px);
 }
 
-.btn-text:active {
+.btn-text:active, .btn-text:focus {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   -webkit-transform: translateY(0px);
@@ -654,11 +657,11 @@ body {
 
 .form__input {
   font-size: 1.5rem;
-  padding: 1.5rem 2rem;
   font-family: inherit;
   color: inherit;
+  padding: 1.5rem 2rem;
   border-radius: 2px;
-  background-color: #eee;
+  background-color: rbga(#eee, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
   width: 90%;
@@ -675,14 +678,21 @@ body {
 }
 
 .form__input:focus:invalid {
-  outline: none;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   border-bottom: 3px solid #ff7730;
 }
 
 .form__input::-webkit-input-placeholder {
   color: #999;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .form__input:placeholder-shown + .form__label {
@@ -692,13 +702,52 @@ body {
           transform: translateY(-4rem);
 }
 
-.form__label {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-left: 2rem;
-  margin-top: .7rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem;
+}
+
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #55c57a;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
 }
 
 .header {
@@ -779,6 +828,38 @@ body {
   width: calc(3*(100% - 3*6rem)/4 + 2*6rem);
 }
 
+.footer {
+  background-color: #333;
+  height: 100%;
+  color: #eee;
+  font-family: inherit;
+  padding: 10rem;
+  font-size: 1.6rem;
+}
+
+.footer__logo {
+  text-align: center;
+}
+
+.footer__copyright {
+  text-align: left;
+}
+
+.footer__item {
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+}
+
+.footer__item:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem;
@@ -831,11 +912,10 @@ body {
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem;
 }
 
 .book__form {
   width: 55%;
-  padding: 5vw;
+  padding: 5rem;
 }
 /*# sourceMappingURL=main.css.map */

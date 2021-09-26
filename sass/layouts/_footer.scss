@@ -1,0 +1,36 @@
+.footer{
+    background-color:#333;
+    height:100%;
+    color: $color-white;
+    font-family: inherit;
+    padding:10rem;
+    font-size:$default-font-size;
+
+    &__logo{
+        text-align: center;
+        // background-color: $color-primary-dark, $color-primary-light;
+    }
+
+    &__copyright{
+        text-align: left;
+    }
+
+    // &__navigation{
+
+    // } 
+
+    &__item{
+        list-style:none;
+        display: inline;
+        text-transform: uppercase;
+
+
+        &:hover{
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+        }
+        
+        &:not(:last-child){
+            margin-right:1.2rem;
+        }
+    }
+}

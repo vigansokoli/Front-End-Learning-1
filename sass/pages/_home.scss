@@ -1,59 +1,58 @@
-.section-about{
+.section-about {
     background-color: $color-gray-light-1;
     padding: 25rem;
     margin-top: -20vh;
 }
 
-.section-tours{
+.section-tours {
     background-color: $color-gray-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -10vh;
 }
 
-.section-features{
-    padding:20rem 0;
-    background-image: linear-gradient(
-            to right bottom,
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.5),
-            rgba($color-primary-dark, 0.8)
-        ),
-    url("../img/nat-4.jpg");
+            rgba($color-primary-dark, 0.8)),
+        url("../img/nat-4.jpg");
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
 
-    & > * {
+    &>* {
         transform: skewY(7deg);
     }
 
 }
 
-.section-stories{
+.section-stories {
     position: relative;
-    padding:15rem 0;
-    margin:0;
+    padding: 15rem 0;
+    margin: 0;
     @include clearfix;
     // background-color: $color-gray-light-1;
 }
 
-.section-book{
-    padding:15rem 0;
-    margin:0;
+.section-book {
+    padding: 15rem 0;
+    margin: 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 }
 
-.book{
-    background-image: linear-gradient(105deg, 
-            rgba($color-white, .9) 50%, 
-            transparent 50%),url(../img/nat-10.jpg);
+.book {
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9) 50%,
+            transparent 50%), url(../img/nat-10.jpg);
     // you can use %(0 to N%) instead of cover, to tell how much is covered
     background-size: cover;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black,.2);
-    height:50rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    // height: 50rem; Not required, full length of shit given
+    
 
-    &__form{
-        width:55%;
-        padding: 5vw;
+    &__form {
+        width: 55%;
+        padding: 5rem;
     }
 }
