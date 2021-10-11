@@ -3,7 +3,7 @@
 
     &__photo{
         width:55%;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
         border-radius: 2px;
         position: absolute;
         transition: all .2s;
@@ -18,7 +18,7 @@
             right: 0;
             top: 20px;
         } 
-        
+
         &--p3{
             left: 20%;
             top: 10rem;
@@ -26,9 +26,9 @@
         
         &:hover{
             // Outline can be given an offset which is what we need to create the border thingy here.
-            outline: 1.5rem solid $color-primary;
+            // outline: 2px solid $color-primary;
             transform: scale(1.05) translateY(-.5rem);
-            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            box-shadow: 0 3rem 4rem rgba($color-black, .5);
             z-index: 20;
         }        
     }

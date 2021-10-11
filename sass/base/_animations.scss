@@ -3,10 +3,12 @@
         opacity: 0;
         transform: translateX(-100px);
     }
+
     80% {
         opacity: 0.7;
         transform: translateX(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -18,10 +20,12 @@
         opacity: 0;
         transform: translateX(100px);
     }
+
     80% {
         opacity: 0.7;
         transform: translateX(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -33,8 +37,24 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@keyframes hoverWhite {
+    0% {
+        background-image: linear-gradient(120deg, orangered 0%, orangered 50%, $color-white 50%);
+    }
+
+    80% {
+        background-image: linear-gradient(120deg, orangered 0%, orangered 50%, $color-white 50%);
+    }
+
+    100% {
+        background-image: linear-gradient(120deg, orangered 0%, orangered 50%, $color-white 50%);
     }
 }
